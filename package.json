@@ -1,0 +1,19 @@
+{
+  "name": "protractor-typescript-jasmine-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "npm run tsc && protractor tmp/config.js",
+    "webdriver-update": "node node_modules/protractor/bin/webdriver-manager update"
+  },
+  "author": "Jacek Góraj",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "2.5.45",
+    "jasmine-data-provider": "^2.2.0",
+    "protractor": "^5.3.0",
+    "typescript": "^2.7.2"
+  }
+}
