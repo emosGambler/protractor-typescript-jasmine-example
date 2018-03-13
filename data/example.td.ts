@@ -1,4 +1,5 @@
-export default [
-    'Marcin',
-    'Jan'
+export const namesData: Array<string> = [
+    'Jacek',
+    'Placek',
+    'Wacek'
 ];

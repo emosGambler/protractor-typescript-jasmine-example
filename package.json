@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "pretest": "npm run webdriver-update",
+    "beforeTest": "npm run webdriver-update",
     "test": "npm run tsc && protractor tmp/config.js",
     "webdriver-update": "node node_modules/protractor/bin/webdriver-manager update"
   },

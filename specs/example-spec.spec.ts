@@ -1,24 +1,27 @@
 import { browser } from 'protractor';
-import { AngularHomepage } from './../pages/examplePage.page';
+import { HomePage } from './../pages/examplePage.page';
+import { namesData } from './../data/example.td';
 import * as using from 'jasmine-data-provider';
-import names from './../data/example.td';
 
-const angularHomepage: AngularHomepage = new AngularHomepage();
+const homePage: HomePage = new HomePage();
 
-using(names, (name: string) => {
-    describe('greeting', () => {
+using(namesData, (name: string) => {
+    describe('The Basics - greetings', () => {
         beforeAll(() => {
-            angularHomepage.open();
+            homePage.open();
         });
-        it('should open Home page', () => {
-            expect(browser.getCurrentUrl()).toEqual(angularHomepage.url);
+
+        it('should open home page', () => {
+            expect(browser.getCurrentUrl()).toEqual(homePage.url);
         });
+
         it('should type name', () => {
-            angularHomepage.setName(name);
-            expect(angularHomepage.getName()).toEqual(name);
+            homePage.setName(name);
+            expect(homePage.getName()).toEqual(name);
         });
+
         it('should update greeting', () => {
-            expect(angularHomepage.getGreeting()).toEqual(`Hello ${name}!`);
+            expect(homePage.getGreetings()).toEqual(`Hello ${name}!`);
         });
     });
 });
