@@ -20,7 +20,7 @@ using(namesData, (name: string) => {
             expect(homePage.getName()).toEqual(name);
         });
 
-        it('should update greeting', () => {
+        it('should update greetings', () => {
             expect(homePage.getGreetings()).toEqual(`Hello ${name}!`);
         });
     });
