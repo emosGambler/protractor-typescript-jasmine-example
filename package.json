@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "2.5.45",
+    "jasmine-console-reporter": "^2.0.1",
     "jasmine-data-provider": "^2.2.0",
     "protractor": "^5.3.0",
     "typescript": "^2.7.2"
